@@ -34,7 +34,7 @@ class DB {
         try {
             /* Create a Database connection and 
              * save it into the variable */
-            $this->db = new PDO($this->getDns(), $this->getUser(), $this->getPassword());
+            $this->db = new PDO($this->dns(), $this->user(), $this->password());
             $this->db->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
         } catch (Exception $ex) {
             /* If the connection fails we will close the 

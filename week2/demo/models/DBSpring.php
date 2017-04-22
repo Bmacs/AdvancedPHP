@@ -9,6 +9,8 @@ class DBSpring extends DB {
     //put your code here
     
     function __construct() {
+
+        parent::__construct('mysql:host=localhost;port=3306;dbname=PHPAdvClassSpring2017', 'root', '');
        /* 
         $this->setDns('mysql:host=localhost;port=3306;dbname=PHPAdvClassSpring2017');
         $this->setPassword('');

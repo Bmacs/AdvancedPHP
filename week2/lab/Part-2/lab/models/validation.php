@@ -17,6 +17,11 @@ class validation {
 
 		return true;
 	}
+
+	public function isValidDate($birthday) {
+	return (bool)strtotime($birthday);
+	}
+
 }
 
 

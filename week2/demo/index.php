@@ -24,6 +24,8 @@
         <?php if ( isset($message) ) : ?>
         <h2><?php echo $message; ?> </h2>
         <?php endif; ?>
+
+        
         
         
     </body>

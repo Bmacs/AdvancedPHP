@@ -11,7 +11,7 @@
             <?php endforeach; ?>
           </select> <br />
 	Zip: <input type="text" name="zip" value="<?php echo $zip ?>"> <br />
-	Birthday: <input type="date" name="birthday" value="<?php echo $birthday ?>"> <br />
+	Birthday: <input type="text" name="birthday" value="<?php echo $birthday ?>"> <br />
 
 	<input type="submit" name="submit" class="btn-success"> <br>
 	<a href="view-addresses.php"><h3>View Addresses</h3></a>

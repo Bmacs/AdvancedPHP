@@ -27,6 +27,8 @@
         $zip = filter_input(INPUT_POST, 'zip');
         $birthday = filter_input(INPUT_POST, 'birthday');
         $states = returnStates();
+        $validation = new validation();
+        $createAdd = new CRUD();
 
         $errors = [];
         if (isPostRequest()) {
@@ -35,7 +37,7 @@
         		$errors[] = 'Full Name is required';
         	}
 
-        	if ( !isValidEmail($email)) {
+        	if (!$validation->isValidEmail($email)) {
         		$errors[] = 'Email is not valid';
         	}
 
@@ -48,12 +50,16 @@
         	}
 
 
-        	if ( !isValidZIP($zip)) {
+        	if ( !$validation->isValidZIP($zip)) {
         		$errors[] = 'Not a valid ZIP code';
         	}
 
+            if ( !$validation->isValidDate($birthday)) {
+                $errors[] = 'Not a valid date';
+            }
+
         	if (count($errors) === 0) {
-        		if (createAddress($fullname, $email, $addressline1, $city, $state, $zip, $birthday) ) {
+        		if ($createAdd->createAddress($fullname, $email, $addressline1, $city, $state, $zip, $birthday) ) {
         			$message = "Address Added";
         		}
         		else {

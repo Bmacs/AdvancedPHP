@@ -16,7 +16,8 @@
 	 <?php
      include './models/dbconnect.php';
      include './models/addressCRUD.php';
-	 $addresses = readAllAddresses();
+     $CRUD = new CRUD();
+	 $addresses = $CRUD->readAllAddresses();
 	 include './templates/view-address.html.php';
 	 ?>
 </body>
