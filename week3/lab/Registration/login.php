@@ -32,6 +32,7 @@
 		}
 
 
+
 		if ($validate->isValidEmail($email));
 		$errors[] = "Email must be valid";
 		if (empty($pass));

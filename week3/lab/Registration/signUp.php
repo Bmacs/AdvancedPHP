@@ -24,7 +24,7 @@
 		var_dump($postValues);
 		$email = filter_input(INPUT_POST, 'email');
 		$password = filter_input(INPUT_POST, 'password');
-			if ($util->isValidEmail($email)) {
+			if ($util->isValidEmail($email) && ($password != "")) {
 			$reg->signup($postValues["email"], $postValues["password"]);
 		}
 	}
