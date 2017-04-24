@@ -18,6 +18,9 @@ function isValidZIP($zip) {
 	return true;
 }
 
+function isValidDate($birthday) {
+	return (bool)strtotime($birthday);
+	}
 
 
 ?>

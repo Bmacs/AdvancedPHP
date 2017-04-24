@@ -19,6 +19,8 @@
 	 $addresses = readAllAddresses();
 	 include './templates/view-address.html.php';
 	 ?>
+
+	 <a href="index.php">Add an address</a>
 </body>
 </html>
 

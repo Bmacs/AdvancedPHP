@@ -52,6 +52,10 @@
         		$errors[] = 'Not a valid ZIP code';
         	}
 
+            if (isValidDate($birthday) === false) {
+                $errors[] = 'Not a valid date';
+            }
+
         	if (count($errors) === 0) {
         		if (createAddress($fullname, $email, $addressline1, $city, $state, $zip, $birthday) ) {
         			$message = "Address Added";
