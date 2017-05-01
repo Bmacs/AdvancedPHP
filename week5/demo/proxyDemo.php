@@ -61,13 +61,12 @@
                 var verb = verbfield.options[verbfield.selectedIndex].value;
                 var resource = document.querySelector('input[name="resource"]').value;
                 var data = {
-                    'fullname': document.querySelector('input[name="fullname"]').value,
+                    'corp': document.querySelector('input[name="corp"]').value,
+                    'incorp_dt': document.querySelector('input[name="incorp_dt"]').value,
                     'email': document.querySelector('input[name="email"]').value,
-                    'addressline1': document.querySelector('input[name="addressline1"]').value,
-                    'city': document.querySelector('input[name="city"]').value,
-                    'state': document.querySelector('input[name="state"]').value,
-                    'zip': document.querySelector('input[name="zip"]').value,
-                    'birthday': document.querySelector('input[name="birthday"]').value
+                    'owner': document.querySelector('input[name="owner"]').value,
+                    'phone': document.querySelector('input[name="phone"]').value,
+                    'location': document.querySelector('input[name="location"]').value
                 };
                 var results = document.querySelector('textarea[name="results"]');
 

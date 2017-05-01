@@ -3,6 +3,14 @@
     <head>
         <meta charset="UTF-8">
         <title></title>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     </head>
     <body>
         <style type="text/css">
@@ -28,26 +36,24 @@
         <br />
         <br />
         Resource for endpoint:<br />
-        <input name="resource" value="address" />
+        <input name="resource" value="corps" />
         <br />
         <br />
         Data(optional):<br />   
-        fullname <input type="text" name="fullname" value="" />
+        corp <input type="text" name="corp" value="" />
         <br />
-        email <input type="email" name="email" value="" />
+        incorpt_dt <input type="datetime-local" name="incorp_dt" value="" />
         <br />
-        addressline1 <input type="text" name="addressline1" value="" />
+        email <input type="email" name="email" value="" placeholder="Example@email.com" />
         <br />
-        city <input type="text" name="city" value="" />
+        owner <input type="text" name="owner" value="" />
         <br />
-        state <input type="text" name="state" list="states" placeholder="Find U.S. State">
+        phone <input type="number" name="phone" />
         <br />
-        zip <input type="number" pattern="[0-9]*" maxlength="5" min="0" name="zip">
-        <br />
-        birthday <input type="date" name="birthday">
+        location <input type="text" name="location" placeholder="0.000, 0.000">
         <br />
         <br />
-        <button>Make Call</button>
+        <button class="btn btn-success">Make Call</button>
         <h3>Results</h3>
 
         <textarea name="results"></textarea>
@@ -61,13 +67,12 @@
                 var verb = verbfield.options[verbfield.selectedIndex].value;
                 var resource = document.querySelector('input[name="resource"]').value;
                 var data = {
-                    'fullname': document.querySelector('input[name="fullname"]').value,
+                    'corp': document.querySelector('input[name="corp"]').value,
+                    'incorp_dt': document.querySelector('input[name="incorp_dt"]').value,
                     'email': document.querySelector('input[name="email"]').value,
-                    'addressline1': document.querySelector('input[name="addressline1"]').value,
-                    'city': document.querySelector('input[name="city"]').value,
-                    'state': document.querySelector('input[name="state"]').value,
-                    'zip': document.querySelector('input[name="zip"]').value,
-                    'birthday': document.querySelector('input[name="birthday"]').value
+                    'owner': document.querySelector('input[name="owner"]').value,
+                    'phone': document.querySelector('input[name="phone"]').value,
+                    'location': document.querySelector('input[name="location"]').value
                 };
                 var results = document.querySelector('textarea[name="results"]');
 

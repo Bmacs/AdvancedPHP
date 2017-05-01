@@ -28,7 +28,7 @@ try {
      * But in this example we will just code it out.
      * 
      */
-    if ( 'address' === $resource ) {
+    if ( 'corps' === $resource ) {
         
         $resourceData = new AddressResource();
         
@@ -64,8 +64,9 @@ try {
             if ( NULL === $id ) {
                 throw new InvalidArgumentException('Address ID ' . $id . ' was not found');
             }
-            
-            if ($resourceData->post($serverData)) {
+            $restServer->setData($resourceData->get($id));
+            if ($resourceData->put($serverData, $id)) {
+                var_dump($serverData);
                 $restServer->setMessage('Address Updated');
                 $restServer->setStatus(201);
             } else {
@@ -77,7 +78,15 @@ try {
 
 
         if ( 'DELETE' === $verb) {
-            
+            $restServer->setData($resourceData->delete($id));
+
+            if ($resourceData->delete($serverData)) {
+                $restServer->setMessage('Address Deleted');
+                $restServer->setStatus(201);
+            } else {
+                throw new Exception('Address could not be deleted');
+            }
+
         }
         
     } else {
