@@ -1,0 +1,9 @@
+<!-- name of phone at top of page -->
+<h1>{{"phone name" | uppercase}}</h1>
+
+<div class="content">
+	<img ng-src="{{vm.phone.imageUrl}}" />
+	<p ng-if="vm.phone.carrier.length > 0"><strong>Carrier:</strong> {{vm.phone.carrier}}</p>
+	<!-- all info about phone with phone.snippet -->
+	<p>{{vm.phone.snippet}}</p>
+</div>
