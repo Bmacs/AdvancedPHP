@@ -94,7 +94,7 @@
 
         <?php if ( isset($fileName) ) : ?>
             <h2><?php echo $fileName; ?> is uploaded successfully.</h2>
-            <h1><a href="scandir.php">Go to files</a></h1>
+            <h1><a href="index.php">Go to files</a></h1>
         <?php else: ?>
             <p><?php echo $error; ?></p>
         <?php endif; ?>

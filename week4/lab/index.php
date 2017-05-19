@@ -25,17 +25,19 @@
 
     $directory = new DirectoryIterator($folder);
 
+
+           if (filter_input(INPUT_GET, 'delete') != null) {
+                    $delete = filter_input(INPUT_GET, 'delete');
+                    unlink($delete);
+                    header('Location: index.php');
+                }
+
+
     include './index.html.php';
     include 'upload-form.php';
 
          
-      if (isset($_GET['delete'])) {
-           if (filter_input(INPUT_GET, 'delete' != null)) {
-                    $delete = $_GET['delete'];
-                    unlink($delete);
-                    header('Location: scandir.php');
-                }
-        }
+ 
             
 
             /*

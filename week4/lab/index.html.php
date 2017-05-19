@@ -29,7 +29,7 @@
 								</td>
 						
 								
-								<td><a href='?delete=./uploads/ <?php echo $fileInfo->getFileName(); ?>'>Delete</a></td>
+								<td><a href='?delete=./uploads/<?php echo $fileInfo->getFileName(); ?>'>Delete</a></td>
 								<td><a href="<?php echo $fileInfo->getPathname();?>">View</td>
 								<td></td>
 								<td><p>This file is <?php echo $fileInfo->getSize(); ?> byte's</p></td>
