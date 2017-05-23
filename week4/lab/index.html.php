@@ -1,5 +1,5 @@
 <div class="container">
-	<table class=".table-condensed">
+	<table class="table">
 		<tbody>
 			<th>File Number</th>
 			<th>File Uploads</th>
@@ -12,8 +12,8 @@
 
 
 				if ($fileInfo->isFile()) :
-				//when something is uploaded increase the number
 
+				//when something is uploaded increase the number
 					$fileNum++;
 
 
@@ -39,7 +39,11 @@
 			endif;
 			endforeach;
 
+
 			?>
 		</tbody>
+
 	</table>
+		<?php include 'upload-form.php';
+ ?>
 </div>	
